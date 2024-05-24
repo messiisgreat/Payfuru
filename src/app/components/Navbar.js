@@ -5,7 +5,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 
-const Navbar = () => {
+const Navbar = ({onSidebar,setOnSidebar}) => {
   const [isOnTop, setIsOnTop] = useState(true);
   useEffect(() => {
     const handleScroll = () => {
@@ -56,6 +56,9 @@ const Navbar = () => {
         <FontAwesomeIcon
           icon={faBars}
           className={`block w-8 tablet:hidden  ${isOnTop ? "text-viewContinue" : "text-white"}`}
+          onClick={()=>{
+            setOnSidebar(true)
+          }}
         />
       </div>
     </div>

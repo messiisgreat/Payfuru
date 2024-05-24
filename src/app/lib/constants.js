@@ -119,3 +119,41 @@ export const localList = [
     ],
   },
 ];
+
+export const instagramList = [
+  {
+    id:0,
+    link: 'https://payful.jp/wp-content/uploads/2024/03/441174274_403965352401647_6737394256193624005_n-320x320.jpg'
+  },
+  {
+    id:1,
+    link: 'https://payful.jp/wp-content/uploads/2024/03/441174274_403965352401647_6737394256193624005_n-320x320.jpg'
+  },
+  {
+    id:2,
+    link: 'https://payful.jp/wp-content/uploads/2024/03/441174274_403965352401647_6737394256193624005_n-320x320.jpg'
+  },
+  {
+    id:3,
+    link: 'https://payful.jp/wp-content/uploads/2024/03/441174274_403965352401647_6737394256193624005_n-320x320.jpg'
+  }
+]
+
+export const donationList = [
+  {
+    id: 0,
+    amount: 10000,
+    serviceName: "スキー場利用券 - ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト",
+    imgLink: "yengifu.png"
+  },{
+    id: 1,
+    amount: 50000,
+    serviceName: "スキー場利用券 - ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト",
+    imgLink: "yengifu.png"
+  },{
+    id: 2,
+    amount: 100000,
+    serviceName: "スキー場利用券 - ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト",
+    imgLink: "yengifu.png"
+  }
+]
