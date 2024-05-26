@@ -1,7 +1,6 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 const Donate = () => {
   return (
@@ -35,7 +34,12 @@ const Donate = () => {
             className="p-6 py-3 border hover:opacity-70 transition-all duration-300 bg-nabBg hover:gap-4 text-white text-4xl rounded-full font-bold flex"
           >
             1パーセントの寄付を始める
-            <FontAwesomeIcon icon={faArrowRight} className="h-10 ml-4" />
+            <Icon
+              icon="formkit:arrowright"
+              width="48"
+              height="48"
+              className="ml-8"
+            />
           </Link>
         </div>
         <div>
@@ -47,7 +51,12 @@ const Donate = () => {
             className="p-6 py-3 border hover:opacity-70 transition-all duration-300 hover:gap-4 bg-white text-nabBg text-4xl rounded-full font-bold flex"
           >
             寄付額のシミュレータ
-            <FontAwesomeIcon icon={faArrowRight} className="h-10 ml-4" />
+            <Icon
+              icon="formkit:arrowright"
+              width="48"
+              height="48"
+              className="ml-8"
+            />
           </Link>
         </div>
       </div>

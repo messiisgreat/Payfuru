@@ -1,14 +1,13 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Slider from "react-slick";
-import PayNab from "../components/PayNab";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { donationList } from "../lib/constants";
 import Link from "next/link";
 import DonationCounter from "../components/donationCounter";
+import { Icon } from "@iconify/react";
+import Sidebar from "../components/Sidebar";
 
 const Page = () => {
   const [donationEst, setDonationEst] = useState(
@@ -37,8 +36,8 @@ const Page = () => {
     autoplay: false,
   };
   const amountSubmit = () => {
-    sessionStorage.setItem("sumDonation", sumDonation)
-  }
+    sessionStorage.setItem("sumDonation", sumDonation);
+  };
   const donationItems = donationList.map((donation) => (
     <div className="p-8 gap-5 text-center">
       <a className="overflow-hidden">
@@ -49,9 +48,7 @@ const Page = () => {
         />
       </a>
       <div className="block mt-12 px-4">
-        <a className="text-2xl font-bold py-16">
-          {donation.serviceName}
-        </a>
+        <a className="text-2xl font-bold py-16">{donation.serviceName}</a>
         <p className="my-12 text-xl items-baseline text-red font-bold ">
           {donation.amount}
           <span>円</span>
@@ -66,10 +63,11 @@ const Page = () => {
   ));
   return (
     <main className="bg-[url('../../public/donationBg.jpg')] pt-8 h-screen bg-cover">
-        <PayNab/>
+      <Sidebar />
       <div className="mt-16 border-t-2 border-t-nabBg">
-        <p className="bg-gradient-to-b from-updataTagBg to-viewContinue text-white text-5xl p-3 rounded-md -translate-y-[50%] m-auto text-center w-fit">ふるさと納税を始める - 返礼品を選択</p>
-        
+        <p className="bg-gradient-to-b from-updataTagBg to-viewContinue text-white text-5xl p-3 rounded-md -translate-y-[50%] m-auto text-center w-fit">
+          ふるさと納税を始める - 返礼品を選択
+        </p>
       </div>
       <div className="">
         <Slider {...donationSettings}>{donationItems}</Slider>
@@ -83,26 +81,41 @@ const Page = () => {
         <div>
           <Link
             href="/donate"
-            className="p-12 py-4 border bg-nabBg text-white text-4xl rounded-full font-bold flex"
+            className="p-12 py-4 border bg-nabBg text-white text-4xl rounded-full font-bold flex items-center"
           >
-            <FontAwesomeIcon icon={faArrowLeft} className="h-10 mr-4" />
+            <Icon
+              icon="formkit:arrowleft"
+              width="48"
+              height="48"
+              className="mr-8"
+            />
             戻る
           </Link>
         </div>
         <div>
           {sumDonation === 0 ? (
-            <div className="p-12 py-4 border bg-white opacity-50 cursor-default text-nabBg text-4xl rounded-full font-bold flex">
+            <div className="p-12 py-4 border bg-white opacity-50 cursor-default text-nabBg text-4xl rounded-full font-bold flex items-center">
               次に
-              <FontAwesomeIcon icon={faArrowRight} className="h-10 ml-4" />
+              <Icon
+                icon="formkit:arrowright"
+                width="48"
+                height="48"
+                className="ml-8"
+              />
             </div>
           ) : (
             <Link
-            onClick={amountSubmit}
+              onClick={amountSubmit}
               href="/personal-info"
-              className="p-12 py-4 border bg-white text-nabBg text-4xl rounded-full font-bold flex"
+              className="p-12 py-4 border bg-white text-nabBg text-4xl rounded-full font-bold flex items-center"
             >
               次に
-              <FontAwesomeIcon icon={faArrowRight} className="h-10 ml-4" />
+              <Icon
+                icon="formkit:arrowright"
+                width="48"
+                height="48"
+                className="ml-8"
+              />
             </Link>
           )}
         </div>

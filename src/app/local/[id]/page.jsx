@@ -1,9 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
+import { Icon } from "@iconify/react";
 import { localList } from "../../lib/constants";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCirclePlus, faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import SimulateUnit from "@/app/components/SimulateUnit";
+import SimulateUnit from "../../components/SimulateUnit";
 import Link from "next/link";
 
 const Page = ({ params }) => {
@@ -89,8 +88,10 @@ const Page = ({ params }) => {
                     );
                   })}
                   <div className="flex">
-                    <FontAwesomeIcon
-                      icon={faCirclePlus}
+                    <Icon
+                      icon="simple-line-icons:plus"
+                      width="32"
+                      height="32"
                       className="m-auto"
                       onClick={handleUnitPlus}
                     />
@@ -105,20 +106,29 @@ const Page = ({ params }) => {
               {allPrice !== 0 && !isNaN(allPrice) && (
                 <>
                   <div className="self-center block px-5">
-                    <FontAwesomeIcon
-                      icon={faArrowRight}
-                      className="m-auto"
-                      size="3x"
-                    />
+                    <Icon icon="formkit:arrowright" width="72" height="48" />
                   </div>
                   <div className="m-auto w-[400px]">
                     <div className="w-full text-center border-8 border-grayBorder border-solid rounded pt-10 pb-10 mb-5">
                       <p className="text-xl mb-6">寄附額</p>
                       <span className="text-5xl ml-5 font-bold"></span>
-                      <span className="m-3 mb-10"><span className={`text-5xl px-2 font-bold ${
-                        donation > 1000 ? "text-grayLetter" : "text-red line-through"
-                        }`}>{Math.ceil(donation/100)*100}</span>円</span>
-                        {donation > 1000 ? null : <p className="text-red mt-10 -mb-10 text-sm">最低寄附額に達していないため、お申し込みいただけません</p>}
+                      <span className="m-3 mb-10">
+                        <span
+                          className={`text-5xl px-2 font-bold ${
+                            donation > 1000
+                              ? "text-grayLetter"
+                              : "text-red line-through"
+                          }`}
+                        >
+                          {Math.ceil(donation / 100) * 100}
+                        </span>
+                        円
+                      </span>
+                      {donation > 1000 ? null : (
+                        <p className="text-red mt-10 -mb-10 text-sm">
+                          最低寄附額に達していないため、お申し込みいただけません
+                        </p>
+                      )}
                     </div>
                     <div className="px-2 text-xs text-center text-grayLetter">
                       最低寄附額： 1,000円、切り上げ単位：100単位、返礼率：25％
@@ -133,7 +143,10 @@ const Page = ({ params }) => {
               </p>
             </div>
           </div>
-          <Link className="float-right rounded-full bg-backButtonBg text-white p-2 px-4 mt-2 hover:underline cursor-pointer hover:text-hoverButton" href="/simulate">
+          <Link
+            className="float-right rounded-full bg-backButtonBg text-white p-2 px-4 mt-2 hover:underline cursor-pointer hover:text-hoverButton"
+            href="/simulate"
+          >
             自治体選択画面に戻る
           </Link>
         </section>

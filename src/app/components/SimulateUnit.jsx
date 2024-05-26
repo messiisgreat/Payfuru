@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleMinus } from "@fortawesome/free-solid-svg-icons";
+import { Icon } from "@iconify/react";
 
-const SimulateUnit = ({ unitKey, item, simulateArray, setSimulateArray, donateCal }) => {
+const SimulateUnit = ({
+  unitKey,
+  item,
+  simulateArray,
+  setSimulateArray,
+  donateCal,
+}) => {
   const [productPrice, setProductPrice] = useState(item.price);
   const [productAmount, setProductAmount] = useState(item.count);
 
@@ -28,13 +33,13 @@ const SimulateUnit = ({ unitKey, item, simulateArray, setSimulateArray, donateCa
   return (
     <div className="flex m-auto my-4 items-center justify-center gap-3">
       {simulateArray.length === 1 ? null : (
-        <FontAwesomeIcon icon={faCircleMinus} onClick={simulateRemove} />
+        <Icon icon="ei:minus" width="32" height="32" onClick={simulateRemove} />
       )}
       <div className="flex">
         <input
           type="number"
           className="border-grayLetter border px-3 py-2.5"
-          value={productPrice == 0 ? '' : productPrice}
+          value={productPrice == 0 ? "" : productPrice}
           onChange={(e) => setProductPrice(Number(e.target.value))}
         />
         <div className="items-center flex">

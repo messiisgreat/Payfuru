@@ -17,11 +17,13 @@ module.exports = {
       }
     },
     screens: {
-      'tablet': '768px',
+      'phone': '426px',
 
-      'laptop': '1024px',
+      'tablet': '769px',
 
-      'desktop': '1280px',
+      'laptop': '1025px',
+
+      'desktop': '1281px',
     },
     colors: {
       'grayLetter': '#666',
