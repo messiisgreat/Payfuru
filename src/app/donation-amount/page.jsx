@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { donationList } from "../lib/constants";
 import Link from "next/link";
-import DonationCounter from "../components/donationCounter";
+import DonationCounter from "../components/DonationCounter.jsx"
 import { Icon } from "@iconify/react";
 import Sidebar from "../components/Sidebar";
 
