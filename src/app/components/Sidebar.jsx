@@ -4,19 +4,27 @@ import Link from "next/link";
 import { Icon } from "@iconify/react";
 
 const Sidebar = () => {
-  const [onSidebar, setOnSidebar] = useState(false);
-  const [isOnTop, setIsOnTop] = useState(true);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsOnTop(window.pageYOffset === 0 ? true : false);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+    const [onSidebar, setOnSidebar] = useState(false);
+    const [isOnTop, setIsOnTop] = useState(true);
   
+    useEffect(() => {
+      const handleScroll = () => {
+        if (typeof window !== 'undefined') {
+          setIsOnTop(window.pageYOffset === 0 ? true : false);
+        }
+      };
+  
+      if (typeof window !== 'undefined') {
+        window.addEventListener("scroll", handleScroll);
+      }
+  
+      return () => {
+        if (typeof window !== 'undefined') {
+          window.removeEventListener("scroll", handleScroll);
+        }
+      };
+    }, []);
+
   return (
     <>
       <div

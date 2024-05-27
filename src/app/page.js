@@ -10,38 +10,39 @@ import Sidebar from "./components/Sidebar";
 import { Icon } from "@iconify/react";
 
 export default function Home() {
-  const [slidesToShow, setSlidesToShow] = useState(
-    window.innerWidth > 768 ? 2 : 1
-  );
-  const [slidesWidth, setSlidesWidth] = useState(
-    window.innerWidth > 1024 ? "bg-white w-[90%]" : "bg-white w-full"
-  );
+  const [slidesToShow, setSlidesToShow] = useState(1);
+  const [slidesWidth, setSlidesWidth] = useState("bg-white w-full");
 
   useEffect(() => {
     const handleResizeSlidesToShow = () => {
       setSlidesToShow(window.innerWidth > 768 ? 2 : 1);
     };
 
-    window.addEventListener("resize", handleResizeSlidesToShow);
+    if (typeof window !== 'undefined') {
+      setSlidesToShow(window.innerWidth > 768 ? 2 : 1);
+      window.addEventListener("resize", handleResizeSlidesToShow);
 
-    return () => {
-      window.removeEventListener("resize", handleResizeSlidesToShow);
-    };
+      return () => {
+        window.removeEventListener("resize", handleResizeSlidesToShow);
+      };
+    }
   }, []);
 
   useEffect(() => {
     const handleResizeSlidesWidth = () => {
-      setSlidesWidth(
-        window.innerWidth > 1024 ? "bg-white w-[90%]" : "bg-white w-full"
-      );
+      setSlidesWidth(window.innerWidth > 1024 ? "bg-white w-[90%]" : "bg-white w-full");
     };
 
-    window.addEventListener("resize", handleResizeSlidesWidth);
+    if (typeof window !== 'undefined') {
+      setSlidesWidth(window.innerWidth > 1024 ? "bg-white w-[90%]" : "bg-white w-full");
+      window.addEventListener("resize", handleResizeSlidesWidth);
 
-    return () => {
-      window.removeEventListener("resize", handleResizeSlidesWidth);
-    };
+      return () => {
+        window.removeEventListener("resize", handleResizeSlidesWidth);
+      };
+    }
   }, []);
+
 
   var settings = {
     dots: true,
