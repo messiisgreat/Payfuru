@@ -9,6 +9,11 @@ const Page = () => {
   const [selected, setSelected] = useState(false);
   const [checkNumber, setCheckNumber] = useState("");
   const [showModal, setShowModal] = useState(false);
+  const [sumDonationSession, setSumDonationSession] = useState("")
+
+  useEffect(() => {
+    setSumDonationSession(sessionStorage.getItem("sumDonation"))
+  })
   useEffect(() => {
     !checkNumber == "" ? setSelected(true) : null;
   }, [checkNumber]);
@@ -50,7 +55,7 @@ const Page = () => {
             <span className="font-light"> • </span>
             <span>ダミーテキストダミーテキストダミーテキスト</span>
             <span className="text-nabBg font-semibold ml-4">
-              {sessionStorage.getItem("sumDonation") || ""}円
+              {sumDonationSession || ""}円
             </span>
           </div>
         </div>
