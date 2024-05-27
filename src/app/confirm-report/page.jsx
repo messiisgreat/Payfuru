@@ -9,8 +9,6 @@ const Page = () => {
   const [selected, setSelected] = useState(false);
   const [checkNumber, setCheckNumber] = useState("");
   const [showModal, setShowModal] = useState(false);
-  const personInfo = JSON.parse(sessionStorage.getItem("personalinfo"));
-  const addressInfo = JSON.parse(sessionStorage.getItem("address"));
   useEffect(() => {
     !checkNumber == "" ? setSelected(true) : null;
   }, [checkNumber]);
@@ -102,23 +100,23 @@ const Page = () => {
             <p className="my-6">
               <span>お名前 : </span>
               <span>
-              {personInfo?.firstName || ''} ${personInfo?.lastName || ''}(
+              山田太郎(
                 <span>
-                  {personInfo?.firstNameKana || ''} ${personInfo?.lastNameKana || ''}
+                ヤマダタロウ
                 </span>
                 )
               </span>
             </p>
             <p className="my-6">
               <span>住所 : </span>
-              <span>{addressInfo?.prefecture || ""}</span>
-              <span>{addressInfo?.municipalitie || ""}</span>
+              <span>东京都</span>
+              <span>中央区</span>
             </p>
             <p className="my-6">
               <span>電話 : </span>
-              <span>{personInfo?.firstPhone || ""}</span>-
-              <span>{personInfo?.secondPhone || ""}</span>-
-              <span>{personInfo?.thirdPhone || ""}</span>
+              <span>012</span>-
+              <span>345</span>-
+              <span>6789</span>
             </p>
             <p className="my-6">
               <span>ダミーテキスト : </span>
