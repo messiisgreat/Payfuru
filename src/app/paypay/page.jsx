@@ -5,9 +5,9 @@ import { QRCodeCanvas } from "qrcode.react";
 import Link from "next/link";
 
 const Page = () => {
-  const [logoIconSize, setLogoIconSize] = useState("100")
+  const [logoIconSize, setLogoIconSize] = useState("75")
   useEffect(() => {
-    window.innerWidth > 768 ? setLogoIconSize("100") : setLogoIconSize("50")
+    window.innerWidth > 768 ? setLogoIconSize("75") : setLogoIconSize("50")
   })
   const [paypayPass, setPaypayPass] = useState("");
   return (
