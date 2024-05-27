@@ -52,7 +52,7 @@ const Page = () => {
             <span className="font-light"> • </span>
             <span>ダミーテキストダミーテキストダミーテキスト</span>
             <span className="text-nabBg font-semibold ml-4">
-              {sessionStorage.getItem("sumDonation")}円
+              {sessionStorage.getItem("sumDonation") || ""}円
             </span>
           </div>
         </div>
@@ -102,23 +102,23 @@ const Page = () => {
             <p className="my-6">
               <span>お名前 : </span>
               <span>
-                {personInfo.firstName + personInfo.lastName}(
+              {personInfo?.firstName || ''} ${personInfo?.lastName || ''}(
                 <span>
-                  {personInfo.firstNameKana + personInfo.lastNameKana}
+                  {personInfo?.firstNameKana || ''} ${personInfo?.lastNameKana || ''}
                 </span>
                 )
               </span>
             </p>
             <p className="my-6">
               <span>住所 : </span>
-              <span>{addressInfo.prefecture}</span>
-              <span>{addressInfo.municipalitie}</span>
+              <span>{addressInfo?.prefecture || ""}</span>
+              <span>{addressInfo?.municipalitie || ""}</span>
             </p>
             <p className="my-6">
               <span>電話 : </span>
-              <span>{personInfo.firstPhone}</span>-
-              <span>{personInfo.secondPhone}</span>-
-              <span>{personInfo.thirdPhone}</span>
+              <span>{personInfo?.firstPhone || ""}</span>-
+              <span>{personInfo?.secondPhone || ""}</span>-
+              <span>{personInfo?.thirdPhone || ""}</span>
             </p>
             <p className="my-6">
               <span>ダミーテキスト : </span>
