@@ -6,13 +6,14 @@ import PaymentCredit from "../components/PaymentCredit";
 
 const Page = () => {
   const [payment, setPayment] = useState(false);
+
   return (
     <main className="block min-h-screen">
       <div className="py-8 m-auto text-center">
         <p>
           ふるさとNOW決済 -{" "}
           <span>
-            {JSON.parse(sessionStorage.getItem("address")).prefecture}
+            東京都
           </span>
         </p>
       </div>
