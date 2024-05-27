@@ -32,7 +32,7 @@ const Page = () => {
             <p className="flex items-start font-semibold pl-10 text-2xl">
               <span className="pt-5">お支払い額</span>
               <span className="flex items-baseline text-9xl">
-                {sessionStorage.getItem("sumDonation")}
+                10000
                 <span className="text-5xl">円</span>
               </span>
             </p>
