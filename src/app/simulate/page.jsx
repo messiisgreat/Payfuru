@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { localList } from "../lib/constants";
 import Link from "next/link";
 
-const Simulate = () => {
+const Page = () => {
   const localSelector = localList.map((local) => (
     <option className="" id={local.id}>
       {local.name}
@@ -65,4 +65,4 @@ const Simulate = () => {
   );
 };
 
-export default Simulate;
+export default Page;

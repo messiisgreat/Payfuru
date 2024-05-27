@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { Icon } from "@iconify/react/dist/iconify.js";
 
-const Donate = () => {
+const Page = () => {
   return (
     <main className="bg-[url('../../public/donationBg.jpg')] pt-20 min-h-screen bg-cover">
       <div className="mt-20">
@@ -64,4 +64,4 @@ const Donate = () => {
   );
 };
 
-export default Donate;
+export default Page;
