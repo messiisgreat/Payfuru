@@ -12,11 +12,11 @@ const Page = () => {
   useEffect(() => {
     !checkNumber == "" ? setSelected(true) : null;
   }, [checkNumber]);
-  {
+  useEffect(() => {
     showModal
       ? (document.body.style.overflow = "hidden")
       : (document.body.style.overflow = "auto");
-  }
+  })
   return (
     <main className="bg-cover">
       {showModal ? (
