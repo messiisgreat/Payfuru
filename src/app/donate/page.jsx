@@ -32,7 +32,7 @@ const Page = () => {
           </p>
           <Link
             href="/donation-amount"
-            className="text-nowrap p-6 py-3 border hover:opacity-70 transition-all duration-300 bg-nabBg hover:gap-4 text-white text-base phone:text-xl tablet:text-3xl rounded-full font-bold flex items-center justify-center mx-14 tablet:mx-0" 
+            className="text-nowrap p-6 py-3 border hover:opacity-70 transition-all duration-300 bg-nabBg text-white text-base phone:text-xl tablet:text-3xl rounded-full font-bold flex items-center justify-center mx-14 tablet:mx-0" 
           >
             1パーセントの寄付を始める
             <Icon
@@ -49,7 +49,7 @@ const Page = () => {
           </p>
           <Link
             href="/simulate"
-            className="text-nowrap p-6 py-3 border hover:opacity-70 transition-all duration-300 hover:gap-4 bg-white text-nabBg text-base phone:text-xl tablet:text-3xl rounded-full font-bold flex items-center justify-center mx-14 tablet:mx-0" 
+            className="text-nowrap p-6 py-3 border hover:opacity-70 transition-all duration-300 bg-white text-nabBg text-base phone:text-xl tablet:text-3xl rounded-full font-bold flex items-center justify-center mx-14 tablet:mx-0" 
           >
             寄付額のシミュレータ
             <Icon
