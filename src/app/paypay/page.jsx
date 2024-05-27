@@ -1,10 +1,14 @@
 "use client";
 import { Icon } from "@iconify/react";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { QRCodeCanvas } from "qrcode.react";
 import Link from "next/link";
 
 const Page = () => {
+  const [logoIconSize, setLogoIconSize] = useState("100")
+  useEffect(() => {
+    window.innerWidth > 768 ? setLogoIconSize("100") : setLogoIconSize("50")
+  })
   const [paypayPass, setPaypayPass] = useState("");
   return (
     <main className="mx-6 laptop:mx-28">
@@ -12,8 +16,8 @@ const Page = () => {
         <div className="flex items-center gap-6 mb-4 tablet:mb-0">
           <Icon
             icon="logos:singlestore-icon"
-            width={window.innerWidth > 768 ? "100" : "50"}
-            height={window.innerWidth > 768 ? "100" : "50"}
+            width={logoIconSize}
+            height={logoIconSize}
           />
           <span className="text-4xl">ふるさと納税</span>
         </div>
