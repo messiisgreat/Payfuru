@@ -28,7 +28,7 @@ const Page = () => {
       <div className="text-center gap-16 block tablet:flex justify-center w-full bottom-20 pb-10">
         <div className="mb-10 tablet:mb-0">
           <Link
-            href="/donation-amount"
+            href="/donate"
             className="text-nowrap p-6 py-3 border hover:opacity-70 transition-all duration-300 bg-nabBg text-white text-base phone:text-xl tablet:text-3xl rounded-full font-bold flex items-center justify-center mx-14 tablet:mx-0" 
           >
             お支払いを始める
