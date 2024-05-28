@@ -11,7 +11,8 @@ const Page = () => {
   const [hasrenderd, setHasrenderd] = useState(false);
   const [ccNumber, setCcNumber] = useState("");
   const [cardHolder, setCardHolder] = useState("");
-  const [payerPhoneNumber, setPayerPhoneNumber] = useState("")
+  const [payerPhoneNumber, setPayerPhoneNumber] = useState("");
+
   useEffect(() => {
     setHasrenderd(false);
   }, []);
@@ -21,6 +22,7 @@ const Page = () => {
       setHasrenderd(true);
     }
   };
+
   const formatAndSetCcNumber = (e) => {
     const inputVal = e.target.value.replace(/ /g, "");
     let inputNumbersOnly = inputVal.replace(/\D/g, "");
@@ -30,7 +32,6 @@ const Page = () => {
     }
 
     const splits = inputNumbersOnly.match(/.{1,4}/g);
-
     let spacedNumber = "";
     if (splits) {
       spacedNumber = splits.join(" ");
@@ -72,9 +73,9 @@ const Page = () => {
             <div className="mb-3">
               <label className="text-grayLetter mb-2">メールアドレス</label>
               <div
-                className={`flex bg-inputBg shadow p-2 w-full items-center ${
+                className={`flex bg-inputBg shadow p-2 w-full items-center  rounded ${
                   hasrenderd && !validator.isEmail(payerMail)
-                    ? "outline-viewContinue outline rounded"
+                    ? "outline-viewContinue outline"
                     : null
                 }`}
               >
@@ -94,7 +95,7 @@ const Page = () => {
             </div>
             <div className="mb-3">
               <label className="text-grayLetter mb-2">カード番号</label>
-              <div className="flex bg-inputBg shadow p-1 w-full items-center pr-2">
+              <div className="flex bg-inputBg shadow p-1 w-full items-center pr-2 hover:outline-grayBorder hover:outline hover:rounded">
                 <input
                   type="text"
                   className="ml-2 bg-inputBg outline-none w-full"
@@ -132,7 +133,7 @@ const Page = () => {
               <div className="flex gap-5 w-full">
                 <div className="w-1/2">
                   <label className="text-grayLetter mb-2">有効期間</label>
-                  <div className="flex bg-inputBg shadow p-1 w-full items-center pr-2">
+                  <div className="flex bg-inputBg shadow p-1 w-full items-center pr-2 hover:outline-grayBorder hover:outline hover:rounded">
                     <input
                       type="date"
                       className="ml-2 bg-inputBg outline-none w-full"
@@ -146,7 +147,7 @@ const Page = () => {
                 </div>
                 <div className="w-1/2">
                   <label className="text-grayLetter mb-2">CVC</label>
-                  <div className="flex bg-inputBg shadow p-1 w-full items-center pr-2">
+                  <div className="flex bg-inputBg shadow p-1 w-full items-center pr-2 hover:outline-grayBorder hover:outline hover:rounded">
                     <input
                       type="text"
                       className="ml-2 bg-inputBg outline-none w-full"
@@ -164,7 +165,7 @@ const Page = () => {
             </div>
             <div className="mb-3">
               <label className="text-grayLetter mb-2">名義人氏名</label>
-              <div className="flex bg-inputBg shadow p-2 w-full items-center ">
+              <div className="flex bg-inputBg shadow p-2 w-full items-center hover:outline-grayBorder hover:outline hover:rounded">
                 <Icon
                   icon="solar:cardholder-bold"
                   width="24"
@@ -195,7 +196,7 @@ const Page = () => {
             <label className="text-grayLetter font-bold text-2xl">
               電話番号
             </label>
-            <div className="flex bg-inputBg shadow p-1 w-full items-center pr-2 mt-3">
+            <div className="flex bg-inputBg shadow p-1 w-full items-center pr-2 mt-3 hover:outline-grayBorder hover:outline hover:rounded">
               <input
                 type="text"
                 className="ml-2 bg-inputBg outline-none w-full text-2xl"
@@ -228,12 +229,12 @@ const Page = () => {
           </div>
         </div>
         <button className="w-full bg-nabBg text-white rounded-md py-3 text-2xl font-bold my-3 block tablet:hidden mt-6">
-            お支払い 30000円
-          </button>
-          <p className="text-grayLetter text-opacity-70 underline decoration-dotted flex tablet:hidden items-center gap-2 justify-center">
-            <Icon icon="fa6-solid:lock" width="16" height="16" />
-            <span className="underline decoration-dotted">Payment secured</span>
-          </p>
+          お支払い 30000円
+        </button>
+        <p className="text-grayLetter text-opacity-70 underline decoration-dotted flex tablet:hidden items-center gap-2 justify-center">
+          <Icon icon="fa6-solid:lock" width="16" height="16" />
+          <span className="underline decoration-dotted">Payment secured</span>
+        </p>
       </div>
     </main>
   );
