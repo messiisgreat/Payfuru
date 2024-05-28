@@ -1,0 +1,30 @@
+{
+  "name": "payfuru",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "next": "14.2.3",
+    "qrcode.react": "^3.1.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-slick": "^0.30.2",
+    "slick-carousel": "^1.8.1",
+    "validator": "^13.12.0"
+  },
+  "devDependencies": {
+    "@iconify/react": "^4.1.1",
+    "@iconify/tailwind": "^1.1.1",
+    "@types/node": "20.12.12",
+    "@types/react": "18.3.2",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "5.4.5"
+  }
+}
