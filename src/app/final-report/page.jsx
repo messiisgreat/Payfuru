@@ -24,7 +24,7 @@ const Page = () => {
             <div className="w-1/3">
               <Link
                 className="font-bold rounded-full bg-nabBg text-3xl text-white p-16 py-8 border-4 w-full block text-center"
-                href=""
+                href="/onestop-info"
               >
                 いいえもしくはわからない
               </Link>

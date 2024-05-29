@@ -30,7 +30,8 @@ const Sidebar = () => {
           isOnTop ? "bg-transparent" : "bg-updataTagBg"
         }`}
       >
-        <div
+        <Link
+        href="/home"
           className={` p-2 ml-6 font-bold w-24 rounded-sm text-sm ${
             isOnTop
               ? "bg-nabBg text-white"
@@ -38,7 +39,7 @@ const Sidebar = () => {
           }`}
         >
           1パーセント
-        </div>
+        </Link>
         <div className="">
           <ul className="gap-8 hidden tablet:flex transition-all duration-300 mr-6">
             <li>
