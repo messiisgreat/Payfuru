@@ -40,7 +40,7 @@ const Page = ({ params }) => {
       setAllPrice(price);
       setDonation(price * 4);
     };
-    
+
   useEffect(() => {
     const local = localList
       .flatMap((prefecture) => prefecture.locals)
@@ -52,7 +52,7 @@ const Page = ({ params }) => {
 
   return (
     <div>
-      <main className="bg-[url('../../public/background-1.jpg')] min-h-screen">
+      <main className="bg-[url('../../public/img/background-1.jpg')] min-h-screen">
         <h1 className="text-5xl text-center py-24 text-white">
           寄附額シミュレーター
         </h1>

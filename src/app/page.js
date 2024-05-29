@@ -102,11 +102,11 @@ export default function Home() {
     </div>
   ));
   return (
-    <main className="bg-[url('../../public/background-1.jpg')]">
+    <main className="bg-[url('../../public/img/background-1.jpg')]">
       <Sidebar />
       <img
         className="h-[100vh] w-[100%] object-cover object-center"
-        src="./hero-image_v7-scaled.jpg"
+        src="./img/hero-image_v7-scaled.jpg"
       ></img>
       <div className="py-40 justify-center w-full flex px-4 tablet:px-0">
         <p className="w-[650px] text-white font-bold text-center text-3xl leading-loose">
@@ -129,8 +129,8 @@ export default function Home() {
       </div>
       <section className="">
         <div className="bg-white border-2 border-black block p-2 max-w-[1280px] m-auto">
-          <img src="./frontpage_text_02.png" className="m-auto" />
-          <img src="./frontpage_img_01.png" className="m-auto mt-3" />
+          <img src="./img/frontpage_text_02.png" className="m-auto" />
+          <img src="./img/frontpage_img_01.png" className="m-auto mt-3" />
           <p className="text-[#E84220] font-bold max-w-[80%] tablet:max-w-[50%] my-6 m-auto">
             ふるさと納税はネットだけだと思っていませんか？<br></br>
             1パーセントなら、いつものお買い物のようにふるさと納税をご利用できます。
@@ -139,42 +139,42 @@ export default function Home() {
         </div>
       </section>
       <img
-        src="./frontpage_allow_img-pylp8jctvir5ytt4tw4hwiw9p0zcu1pgd8f8i25tc8.png"
+        src="./img/frontpage_allow_img-pylp8jctvir5ytt4tw4hwiw9p0zcu1pgd8f8i25tc8.png"
         className="m-auto my-8"
       />
       <img
-        src="./frontpage_allow_img-pylp8jctvir5ytt4tw4hwiw9p0zcu1pgd8f8i25tc8.png"
+        src="./img/frontpage_allow_img-pylp8jctvir5ytt4tw4hwiw9p0zcu1pgd8f8i25tc8.png"
         className="m-auto my-8"
       />
       <img
-        src="./frontpage_allow_img-pylp8jctvir5ytt4tw4hwiw9p0zcu1pgd8f8i25tc8.png"
+        src="./img/frontpage_allow_img-pylp8jctvir5ytt4tw4hwiw9p0zcu1pgd8f8i25tc8.png"
         className="m-auto my-8"
       />
       <section className="">
         <div className="bg-white border-2 border-black block p-2 max-w-[1280px] m-auto">
-          <img src="./frontpage_img_03.png" className="m-auto mt-3" />
-          <img src="./frontpage_text_04.png" className="m-auto" />
+          <img src="./img/frontpage_img_03.png" className="m-auto mt-3" />
+          <img src="./img/frontpage_text_04.png" className="m-auto" />
           <p className="text-[#E84220] font-bold max-w-[80%] tablet:max-w-[50%] m-auto my-6">
             ふるさと納税に必要な情報登録はお支払い後でOK！もちろん、ワンストップ特例申請も可能です。登録を完了したら、寄附証明書が後日ご自宅に届きます。
           </p>
         </div>
       </section>
       <img
-        src="./frontpage_allow_img-pylp8jctvir5ytt4tw4hwiw9p0zcu1pgd8f8i25tc8.png"
+        src="./img/frontpage_allow_img-pylp8jctvir5ytt4tw4hwiw9p0zcu1pgd8f8i25tc8.png"
         className="m-auto my-8"
       />
       <img
-        src="./frontpage_allow_img-pylp8jctvir5ytt4tw4hwiw9p0zcu1pgd8f8i25tc8.png"
+        src="./img/frontpage_allow_img-pylp8jctvir5ytt4tw4hwiw9p0zcu1pgd8f8i25tc8.png"
         className="m-auto my-8"
       />
       <img
-        src="./frontpage_allow_img-pylp8jctvir5ytt4tw4hwiw9p0zcu1pgd8f8i25tc8.png"
+        src="./img/frontpage_allow_img-pylp8jctvir5ytt4tw4hwiw9p0zcu1pgd8f8i25tc8.png"
         className="m-auto my-8"
       />
       <section>
         <div className="bg-white border-2 border-black block p-2 max-w-[1280px] m-auto">
-          <img src="./frontpage_img_02.png" className="m-auto mt-3" />
-          <img src="./frontpage_text_03.png" className="m-auto" />
+          <img src="./img/frontpage_img_02.png" className="m-auto mt-3" />
+          <img src="./img/frontpage_text_03.png" className="m-auto" />
           <p className="text-[#E84220] font-bold max-w-[80%] tablet:max-w-[50%] m-auto my-6">
             事前のチャージやアプリのダウンロードは必要ありません！<br></br>
             1パーセントならいつも通りレジに商品を持っていき、お会計するだけ。お支払いの際に
@@ -208,7 +208,7 @@ export default function Home() {
           </p>
         </div>
         <div className="bg-white border-2 border-black flex p-2 max-w-[1280px] m-auto items-center justify-center mb-10">
-          <img src="./frontpage_img_calc-150x150.png" className="w-fit mt-3" />
+          <img src="./img/frontpage_img_calc-150x150.png" className="w-fit mt-3" />
           <Link
             className="text-[#E84220] font-bold  my-6 text-3xl ml-5"
             href="/simulate"

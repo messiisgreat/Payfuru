@@ -64,7 +64,7 @@ const Page = () => {
     </div>
   ));
   return (
-    <main className="bg-[url('../../public/donationBg.jpg')] bg-cover">
+    <main className="bg-[url('../../public/img/donationBg.jpg')] bg-cover">
       <Sidebar />
       <div className="border-b-2 border-b-nabBg pt-14 mb-10">
         <p className="bg-gradient-to-b from-updataTagBg to-viewContinue text-white text-5xl p-3 rounded-md translate-y-[50%] m-auto text-center w-fit">

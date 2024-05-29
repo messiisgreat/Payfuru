@@ -15,12 +15,27 @@ const AddressInput = ({
 }) => {
   const [invalid, setInvalid] = useState(false);
   
+  const formatAndSetZipcode = (e) => {
+    const inputVal = e.target.value.replace(/ /g, "");
+    let inputNumbersOnly = inputVal.replace(/\D/g, "");
+
+    if (inputNumbersOnly.length > 7) {
+      inputNumbersOnly = inputNumbersOnly.substr(0, 7);
+    }
+
+    let formattedNumber = "";
+    if (inputNumbersOnly.length > 0) {
+      formattedNumber = inputNumbersOnly.substr(0, 3);
+    }
+    if (inputNumbersOnly.length > 3) {
+      formattedNumber += " " + inputNumbersOnly.substr(3, 4);
+    }
+
+    setVariable(formattedNumber);
+  };
   useEffect(() => {
     if (data === "zipcode") {
-      if (variable.length === 3) {
-        setVariable(variable + "-");
-      }
-      const zipinput = variable.replace(/[^0-9]/g, "");
+      const zipinput = variable.replace(/ /g, '')
       if (variable.length === 8) {
         setIsVerified(true);
         setInvalid(false);
@@ -42,12 +57,12 @@ const AddressInput = ({
       <input
         type={inputType}
         placeholder={placeholder}
-        className={`rounded-full border-4 p-6 px-10 text-2xl focus:outline-none w-full ${
+        className={`rounded-full border-4 p-3 desktop:p-6 px-10 text-2xl focus:outline-none w-full ${
           invalid ? "border-red" : "border-inputBorder"
         }`}
         readOnly={readOnly}
         value={variable}
-        onChange={(e) => {
+        onChange={data === "zipcode"?formatAndSetZipcode:(e) => {
           setVariable(e.target.value);
         }}
       />

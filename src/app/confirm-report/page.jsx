@@ -15,7 +15,7 @@ const Page = () => {
   useEffect(() => {
     setSumDonationSession(sessionStorage.getItem("sumDonation"))
   })
-  
+
   useEffect(() => {
     !checkNumber == "" ? setSelected(true) : null;
   }, [checkNumber]);
@@ -39,21 +39,9 @@ const Page = () => {
       </div>
       <div className="block desktop:flex border-b-4 border-b-black mb-12 pb-6 w-4/5 m-auto gap-8">
         <div className="w-full desktop:w-1/2">
-          <div className="text-xl laptop:text-2xl my-12 font-semibold block tablet:flex justify-between items-center">
+          <div className="text-2xl laptop:text-4xl my-12 font-semibold block tablet:flex justify-between items-center py-5">
             <span>返礼品 • 合計寄付金額</span>
             <span className="text-nabBg px-2">10000円</span>
-            <Link
-              href="/donation-amount"
-              className="border bg-white text-nabBg rounded-full p-1 px-3 tablet:p-3 tablet:px-6 items-center inline-flex mt-4 tablet:mt-0"
-            >
-              <span className="text-nowrap">変更する</span>
-              <Icon
-                icon="formkit:arrowright"
-                width="48"
-                height="48"
-                className="ml-4 tablet:ml-8"
-              />
-            </Link>
           </div>
           <div className="text-lg laptop:text-xl my-2">
             <span className="font-light"> • </span>
@@ -146,24 +134,25 @@ const Page = () => {
               height="48"
               className="mr-4 tablet:mr-8"
             />
-            停止する
+            戻る
           </Link>
         </div>
         <div>
-          <button
+          <Link
+            href=""
             onClick={() => {
               setShowModal(true);
             }}
             className="p-4 tablet:p-6 items-center laptop:p-12 py-1 tablet:py-2 laptop:py-4 border bg-white text-nabBg text-nowrap text-xl tablet:text-2xl laptop:text-4xl rounded-full font-semibold flex"
           >
-            次に
+            送信
             <Icon
               icon="formkit:arrowright"
               width="48"
               height="48"
               className="ml-4 tablet:ml-8"
             />
-          </button>
+          </Link>
         </div>
       </div>
     </main>

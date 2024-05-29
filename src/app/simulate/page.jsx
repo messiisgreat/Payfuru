@@ -15,7 +15,7 @@ const Page = () => {
   const handleSelectChange = (event) => {
     setSelectedValue(event.target.value);
   };
-  
+
   useEffect(() => {
     const activePrefecture = localList.find((i) => i.name === selectedValue);
     setLocals(activePrefecture?.locals || []);
@@ -41,7 +41,7 @@ const Page = () => {
   }, [locals]);
 
   return (
-    <main className="bg-[url('../../public/background-1.jpg')]">
+    <main className="bg-[url('../../public/img/background-1.jpg')]">
       <h1 className="text-[42px]  text-center py-16 text-white">
         寄附額シミュレーター
       </h1>

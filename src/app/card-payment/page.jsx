@@ -64,7 +64,7 @@ const Page = () => {
     <main>
       <Sidebar />
       <div className="h-[250px] overflow-hidden">
-        <img src="./furusato.jpg" alt="" className="w-full" />
+        <img src="./img/furusato.jpg" alt="" className="w-full" />
       </div>
       <div className="justify-center px-4 phone:px-16 bg-white w-full m-auto block tablet:flex gap-10 py-12">
         <div className="w-full tablet:w-1/2">
@@ -184,7 +184,7 @@ const Page = () => {
             </div>
           </form>
           <button className="w-full bg-nabBg text-white rounded-md py-3 text-2xl font-bold my-3 hidden tablet:block">
-            お支払い 30000円
+            お支払い 20000円
           </button>
           <p className="text-grayLetter text-opacity-70 underline decoration-dotted hidden tablet:flex items-center gap-2 justify-center">
             <Icon icon="fa6-solid:lock" width="16" height="16" />
@@ -213,23 +213,19 @@ const Page = () => {
             </div>
             <div className="my-8">
               <div className="flex justify-between text-xl px-3 my-1">
-                <span className="text-grayLetter">価格</span>
-                <span>50000円</span>
-              </div>
-              <div className="flex justify-between text-xl px-3 my-1">
-                <span className="text-grayLetter">お支払い</span>
-                <span>30000円</span>
+                <span className="text-grayLetter">寄付額</span>
+                <span>20000円</span>
               </div>
               <hr className="bg-grayLetter my-4 h-0.5" />
               <div className="flex justify-between text-xl px-3 my-1">
-                <span className="text-grayLetter">寄付額</span>
+                <span className="text-grayLetter">お支払い</span>
                 <span>20000円</span>
               </div>
             </div>
           </div>
         </div>
         <button className="w-full bg-nabBg text-white rounded-md py-3 text-2xl font-bold my-3 block tablet:hidden mt-6">
-          お支払い 30000円
+          お支払い 20000円
         </button>
         <p className="text-grayLetter text-opacity-70 underline decoration-dotted flex tablet:hidden items-center gap-2 justify-center">
           <Icon icon="fa6-solid:lock" width="16" height="16" />

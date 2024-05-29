@@ -14,7 +14,7 @@ const StreetInput = ({
     <>
       <input
         placeholder={placeholder}
-        className={`rounded-full border-4 p-6 px-10 text-2xl focus:outline-none w-full ${
+        className={`rounded-full border-4 p-3 desktop:p-6 px-10 text-2xl focus:outline-none w-full ${
           invalid ? "border-red" : "border-inputBorder"
         }`}
         value={variable}

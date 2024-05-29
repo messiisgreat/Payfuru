@@ -11,7 +11,7 @@ const Page = () => {
   useEffect(() => {
     window.innerWidth > 768 ? setLogoIconSize("75") : setLogoIconSize("50")
   })
-  
+
   return (
     <main className="mx-6 laptop:mx-28">
       <nav className="block tablet:flex justify-between py-3 items-center">
@@ -53,7 +53,7 @@ const Page = () => {
             size={230}
             fgColor="#1D0101"
             imageSettings={{
-              src: "/qrimage.jpg",
+              src: "/img/qrimage.jpg",
               excavate: true,
               width: 100,
               height: 100,

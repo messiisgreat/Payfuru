@@ -37,11 +37,11 @@ const PersonInput = ({
   }, [variable]);
   
   return (
-    <div className={columnSpan}>
+    <div className={`mb-6 tablet:mb-0 ${columnSpan}`}>
       <input
         type={inputType}
         placeholder={placeholder}
-        className={`rounded-full border-4  p-6 px-10 text-2xl focus:outline-none w-full ${
+        className={`rounded-full border-2 phone:border-4 p-1 phone:p-3 desktop:p-6 px-5 desktop:px-10 text-2xl focus:outline-none w-full ${
           invalid ? "border-red" : "border-inputBorder"
         }`}
         value={variable}

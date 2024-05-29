@@ -145,20 +145,20 @@ export const donationList = [
     amount: 10000,
     serviceName:
       "スキー場利用券 - ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト",
-    imgLink: "yengifu.png",
+    imgLink: "img/yengifu.png",
   },
   {
     id: 1,
     amount: 50000,
     serviceName:
       "スキー場利用券 - ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト",
-    imgLink: "yengifu.png",
+    imgLink: "img/yengifu.png",
   },
   {
     id: 2,
     amount: 100000,
     serviceName:
       "スキー場利用券 - ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト",
-    imgLink: "yengifu.png",
+    imgLink: "img/yengifu.png",
   },
 ];
